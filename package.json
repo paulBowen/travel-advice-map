@@ -9,9 +9,9 @@
   "author": "Paul Bowen",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "2",
-    "csso": "3",
-    "request": "2",
-    "uglify-js": "3"
+    "aws-sdk": "^2.185.0",
+    "csso": "^3.5.0",
+    "request": "^2.83.0",
+    "uglify-js": "^3.3.8"
   }
 }
