@@ -1,0 +1,198 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map {
+    height: 100%;
+}
+.leaflet-container {
+    background-color: #9BD4F5;
+}
+.leaflet-bar a {
+    background: #EEE;
+}
+.country-legend {
+    padding: 6px 8px;
+    background: #EEE;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    line-height: 18px;
+    width: 20vw;
+}
+.country-legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+.country-legend span {
+    font-size: calc(7px + 0.5vw);
+    color: rgb(54, 56, 61);
+}
+.country-close {
+    margin-bottom: 0 !important;
+}
+#country-close-button {
+    padding: 6px 8px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-width: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: calc(7px + 0.5vw);
+    color: rgb(54, 56, 61);
+    cursor: pointer;
+}
+.country-info {
+    padding: 6px 8px;
+    background: linear-gradient(rgba(255,255,255,0.8), #EEE 30%);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px 0 5px 5px;
+    height: 60vh;
+    width: 72vw;
+    overflow: scroll;
+}
+.country-title h1 {
+    font-size: 28px;
+    float: right;
+    margin-left: 90px;
+}
+.country-emoji-placeholder {
+    float: left;
+    padding-bottom: 100%;
+    position: relative;
+}
+.country-emoji-placeholder img {
+    position: absolute;
+}
+.country-details-container {
+    margin-top: 80px;
+}
+.country-details-container p {
+    font-size: calc(7px + 0.5vw);
+    color: rgb(54, 56, 61);
+}
+.country-details-container a {
+    font-size: calc(7px + 0.5vw);
+    color: #0078A8;
+}
+.country-map-container {
+    float: left;
+    width: 30vw;
+}
+.country-map-placeholder {
+    padding-bottom: 85%;
+    position: relative;
+}
+.country-map {
+    width: 100%;
+    position: absolute;
+}
+.country-map img {
+    width: 100%;
+    position: absolute;
+}
+.country-advice-container {
+    margin-left: 32vw;
+}
+@media screen and (min-height: 1000px) {
+    .country-info {
+        height: 40vh;
+    }
+}
+@media screen and (max-width: 999px) {
+    .country-legend {
+        width: 15vw;
+        line-height: 12px;
+    }
+    .country-legend i {
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+    }
+}
+@media screen and (max-width: 639px) {
+    .country-map-container {
+        display: none;
+    }
+    .country-info {
+        width: 40vw;
+    }
+    .country-advice-container {
+        margin: 0;
+    }
+    .country-title {
+        text-align: center;
+    }
+    .country-title h1 {
+        font-size: calc(12px + 1vw);
+        margin: 0;
+        float: none;
+    }
+    .country-emoji-placeholder {
+        float: none;
+        padding-bottom: 70px;
+        padding-right: 70px;
+    }
+    .country-details-container {
+        margin-top: 10px;
+    }
+}
+.advice-accordion label {
+    padding: 10px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #CCC;
+}
+.advice-color-normal {
+    color: rgb(255, 255, 255);
+    stroke: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+    background: #008655;
+}
+.advice-color-caution {
+    color: rgb(54, 56, 61);
+    stroke: rgb(54, 56, 61);
+    fill: rgb(54, 56, 61);
+    background: #FED42B;
+}
+.advice-color-warning {
+    color: rgb(54, 56, 61);
+    stroke: rgb(54, 56, 61);
+    fill: rgb(54, 56, 61);
+    background: #F7941E;
+}
+.advice-color-danger {
+    color: rgb(255, 255, 255);
+    stroke: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+    background: #D24242;
+}
+.advice-color-none {
+    background: #708090;
+}
+.advice-accordion input {
+    display: none;
+}
+.advice-text {
+    display: none;
+}
+.advice-label {
+    font-size: calc(8px + 0.5vw);
+}
+.advice-chevron-down {
+    display: block;
+    float: right;
+    margin: 2px;
+}
+.advice-accordion input:checked ~ .advice-text {
+    background: #CCC;
+    margin: 0;
+    padding: 1vh;
+    display: block;
+}
+.advice-accordion input:checked ~ .advice-label .advice-chevron-down {
+    display: none;
+}

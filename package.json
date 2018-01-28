@@ -1,0 +1,17 @@
+{
+  "name": "travel-advice-map",
+  "version": "1.0.0",
+  "description": "Source code and scripts to build traveladvicemap.com",
+  "main": "generate.js",
+  "scripts": {
+    "start": "node ./scripts/generate.js > map.log"
+  },
+  "author": "Paul Bowen",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "2",
+    "csso": "3",
+    "request": "2",
+    "uglify-js": "3"
+  }
+}
