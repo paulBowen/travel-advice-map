@@ -31,7 +31,7 @@ function updateCode () {
 
     Promise.all(promises)
         .then(values => {
-            if (settings.AWS) {
+            if (settings.s3) {
                 updateAWS.CDN(values);
             }
         })
