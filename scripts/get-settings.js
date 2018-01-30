@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 try {
-    var settings = JSON.parse(fs.readFileSync("./settings.json", "utf8"));
+    var settings = JSON.parse(fs.readFileSync(path.join(__dirname, "settings.json"), "utf8"));
 }
 catch (e) {
     throw new Error(`Settings file could not be parsed due to ${e.name}:${e.message}`);
@@ -16,7 +16,7 @@ if (!settings.baseURL) {
 }
 
 if (!settings.distDir) {
-    throw new Error("No distribution directory specified in settings file");
+    settings.distDir = path.join(__dirname, "..", "dist");
 }
 
 try {

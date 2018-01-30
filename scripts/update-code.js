@@ -7,8 +7,8 @@ const settings = require("./get-settings");
 const updateAWS = require("./update-aws");
 
 function updateCode () {
-    const assetsDir = "../assets/";
-    const srcDir = "../src/";
+    const assetsDir = path.join(__dirname, "..", "assets");
+    const srcDir = path.join(__dirname, "..", "src");
 
     // No leading slash, as these may be used as S3 object keys
     const assets = [
