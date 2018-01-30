@@ -49,8 +49,7 @@ function updateCountries (requiredCountries, geoJSON) {
 
                 if (settings.s3) {
                     updateAWS.S3(path.join(settings.distDir, fileName), fileName, value => {
-                        values.push(value);
-                        updateAWS.CDN(values);
+                        updateAWS.CDN([value].concat(...values));
                     });
                 }
             });
@@ -80,7 +79,7 @@ function updateCountry (requiredCountry, feature) {
                 promises.push(updateImage(feature, country));
 
                 Promise.all(promises)
-                    .then(() => resolve())
+                    .then(values => resolve(values))
                     .catch(e => resolve(console.error(e.message)));
             }
             else {
