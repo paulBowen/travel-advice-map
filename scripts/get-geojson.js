@@ -21,7 +21,7 @@ function getGeoJSON (callback) {
             }
 
             try {
-                callback(JSON.parse(data));
+                callback(JSON.parse(data.Body.toString("utf-8")));
             }
             catch (e) {
                 callback(console.error(`Could not parse GeoJSON from S3 due to ${e.name}:${e.message}`));
