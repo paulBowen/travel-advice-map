@@ -43,7 +43,7 @@ function updateS3 (source, dest, callback) {
         }
 
         if (callback) {
-            callback(data.key);
+            callback(data.Key);
         }
     });
 }
